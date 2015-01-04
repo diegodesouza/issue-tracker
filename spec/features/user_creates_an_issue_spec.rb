@@ -19,13 +19,23 @@ feature "User creates an issue", %q(
     it "creates an issue with valid attributes" do
         Category.create!(name: "Bug")
         Category.create!(name: "Feature Request")
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> ca6356856df48c2d00f51add2236e79def137263
       visit '/issues/new'
 
       fill_in "Title", with: "Broken link"
       fill_in "Description", with: "The sign in link is broken"
       check "Is reproducible"
+<<<<<<< HEAD
       select "Feature Request", from: "Category"
+=======
+      save_and_open_page
+      select "Feature Request", from: "Category"
+      # We use capybara choose method to choose the radio button w/ label "Moderate"
+>>>>>>> ca6356856df48c2d00f51add2236e79def137263
       choose ("Moderate")
       click_on "Create Issue"
 
