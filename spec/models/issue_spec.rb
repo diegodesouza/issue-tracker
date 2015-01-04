@@ -1,21 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Issue, :type => :model do
-
-  describe '.categories' do
-    it 'includes Bug' do
-      expect(Issue.categories).to include('Bug')
-    end
-
-    it 'includes Feature Request' do
-      expect(Issue.categories).to include('Feature Request')
-    end
-
-    it 'includes Customer Service' do
-      expect(Issue.categories).to include('Customer Service')
-    end
-  end
-
   describe '.severities' do
     it 'includes Low' do
       expect(Issue.severities).to include('Low')
@@ -34,5 +19,12 @@ RSpec.describe Issue, :type => :model do
     #   issue.valid?
     #   expect(Issue.all.count).to eql(0)
     # end
+
+    it 'belongs to category' do
+      category = Category.create(name: "The Bearded One")
+      issue = Issue.create(title: "Best Beard", description: "Adam has the best beard", severity: "High", category: category)
+
+      expect(issue.category).to eql(category)
+    end
   end
 end

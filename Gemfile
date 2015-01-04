@@ -20,4 +20,5 @@ group :test, :development do
   gem 'spring'
   gem 'byebug'
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
