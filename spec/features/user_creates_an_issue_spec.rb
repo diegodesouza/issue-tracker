@@ -28,6 +28,13 @@ feature "User creates an issue", %q(
   end
 
   context "with invalid attributes" do
-    it "sees errors for invalid attributes"
+    it "sees errors for invalid attributes" do
+      visit '/issues/new'
+
+      click_on "Create Issue"
+
+      expect(page).to have_content "Title can't be blank"
+      expect(page).to have_content "Description can't be blank"
+    end
   end
 end
