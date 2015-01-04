@@ -19,4 +19,5 @@ group :test, :development do
   gem 'launchy'
   gem 'spring'
   gem 'byebug'
+  gem 'database_cleaner'
 end
