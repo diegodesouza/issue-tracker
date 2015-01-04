@@ -18,9 +18,9 @@ feature "User creates an issue", %q(
 
       fill_in "Title", with: "Broken link"
       fill_in "Description", with: "The sign in link is broken"
-      # Check the checkbox with a label that says 'Is reproducible'
       check "Is reproducible"
-      fill_in "Category", with: "bug"
+      # Now we're using the select method to select an option by name
+      select "Feature Request", from: "Category"
       click_on "Create Issue"
 
       expect(page).to have_content "Issue was successfully created"
