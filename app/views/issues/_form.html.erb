@@ -25,8 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.select :category, ["Bug", "Feature Request", "Customer Service"],
-    include_blank: true %>
+    <%= f.select :category, Issue.categories, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
