@@ -27,6 +27,13 @@
     <%= f.label :category %><br>
     <%= f.select :category, Issue.categories, include_blank: true %>
   </div>
+  <div class="field">
+    <%= f.label :severity %><br>
+    <% Issue.severities.each do |s| %>
+    <%= f.radio_button :severity, s %>
+    <%= f.label :severity, s, value: s %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

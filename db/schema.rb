@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150104000849) do
     t.text     "description"
     t.boolean  "is_reproducible"
     t.string   "category"
+    t.string   "severity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

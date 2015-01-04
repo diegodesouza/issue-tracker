@@ -5,6 +5,7 @@ class CreateIssues < ActiveRecord::Migration
       t.text :description
       t.boolean :is_reproducible
       t.string :category
+      t.string :severity
 
       t.timestamps
     end

@@ -10,4 +10,14 @@ class Issue < ActiveRecord::Base
       'Customer Service'
     ]
   end
+
+  validates_presence_of :severity
+  
+  def self.severities
+    [
+      'Low',
+      'Moderate',
+      'High'
+    ]
+  end
 end
