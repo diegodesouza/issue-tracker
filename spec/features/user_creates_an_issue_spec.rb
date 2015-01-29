@@ -11,8 +11,8 @@ feature "User creates an issue", %q(
   [X] I can mark the issue as reproducible
   [X] I must choose a category for the issue
   [X] I can categorize an issue as either "Bug", "Feature Request", or "Customer Service Issue"
-  [ ] I can rate the severity of the `Issue` as either "High", "Moderate" or "Low"
-  [ ] I must choose a severity
+  [X] I can rate the severity of the `Issue` as either "High", "Moderate" or "Low"
+  [X] I must choose a severity
 ) do
 
   context "with valid attributes" do
